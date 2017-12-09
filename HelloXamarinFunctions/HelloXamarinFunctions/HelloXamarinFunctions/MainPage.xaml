@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HelloXamarinFunctions"
+             x:Class="HelloXamarinFunctions.MainPage">
+
+    <StackLayout VerticalOptions="Center"
+                 Margin="10"
+                 HorizontalOptions="Fill">
+        
+        <Entry x:Name="FirstNameText"
+               FontSize="Large" />
+
+        <Button x:Name="GoButton"
+                FontSize="Large"
+                Text="Go" />
+
+        <Label Text="Welcome to Xamarin.Forms!"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               x:Name="ResultText"/>
+
+    </StackLayout>   
+
+</ContentPage>
