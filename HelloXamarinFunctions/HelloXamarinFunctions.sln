@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloXamarinFunctions.iOS",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloXamarinFunctions.UWP", "HelloXamarinFunctions\HelloXamarinFunctions.UWP\HelloXamarinFunctions.UWP.csproj", "{C963712C-BC5D-45EF-8508-1D07D85FB81E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloXamarinFunctions", "HelloXamarinFunctions\HelloXamarinFunctions\HelloXamarinFunctions.csproj", "{BFAC2AA8-F998-4D76-8310-6C0F4849F198}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloXamarinFunctions", "HelloXamarinFunctions\HelloXamarinFunctions\HelloXamarinFunctions.csproj", "{BFAC2AA8-F998-4D76-8310-6C0F4849F198}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -180,6 +180,8 @@ Global
 		{C963712C-BC5D-45EF-8508-1D07D85FB81E}.AppStore|x86.Build.0 = Release|x86
 		{C963712C-BC5D-45EF-8508-1D07D85FB81E}.AppStore|x86.Deploy.0 = Release|x86
 		{C963712C-BC5D-45EF-8508-1D07D85FB81E}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C963712C-BC5D-45EF-8508-1D07D85FB81E}.Debug|Any CPU.Build.0 = Debug|x86
+		{C963712C-BC5D-45EF-8508-1D07D85FB81E}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{C963712C-BC5D-45EF-8508-1D07D85FB81E}.Debug|ARM.ActiveCfg = Debug|ARM
 		{C963712C-BC5D-45EF-8508-1D07D85FB81E}.Debug|ARM.Build.0 = Debug|ARM
 		{C963712C-BC5D-45EF-8508-1D07D85FB81E}.Debug|ARM.Deploy.0 = Debug|ARM
