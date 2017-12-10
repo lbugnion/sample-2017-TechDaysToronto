@@ -1,8 +1,7 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
-using System.Net.Http;
-using Data;
+using HelloXamarin.Data;
 using System;
 
 namespace HelloAndroid
@@ -25,6 +24,7 @@ namespace HelloAndroid
 
                 try
                 {
+                    text.Text = "Please wait";
                     var service = new YoutubeService();
                     text.Text = await service.Refresh();
                 }

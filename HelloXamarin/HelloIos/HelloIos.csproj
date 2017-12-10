@@ -111,9 +111,9 @@
     <Content Include="Entitlements.plist" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Data\Data.csproj">
-      <Project>{003886ef-b505-43d9-bd9e-2be608347793}</Project>
-      <Name>Data</Name>
+    <ProjectReference Include="..\HelloXamarin.Data\HelloXamarin.Data.csproj">
+      <Project>{ba1148a5-5831-40a8-8068-20c868bb9442}</Project>
+      <Name>HelloXamarin.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

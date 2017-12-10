@@ -1,4 +1,4 @@
-﻿using Data;
+﻿using HelloXamarin.Data;
 using System;
 
 using UIKit;
@@ -19,6 +19,7 @@ namespace HelloIos
             {
                 try
                 {
+                    MyLabel.Text = "Please wait";
                     var service = new YoutubeService();
                     MyLabel.Text = await service.Refresh();
                 }
