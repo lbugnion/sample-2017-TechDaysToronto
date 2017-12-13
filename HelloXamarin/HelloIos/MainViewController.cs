@@ -1,19 +1,24 @@
-﻿using HelloXamarin.Data;
+﻿using Foundation;
+using HelloXamarin.Data;
 using System;
-
 using UIKit;
 
 namespace HelloIos
 {
-    public partial class ViewController : UIViewController
+    public partial class MainViewController : UIViewController
     {
-        public ViewController(IntPtr handle) : base(handle)
+        public MainViewController (IntPtr handle) : base (handle)
         {
         }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+
+            AboutButton.TouchUpInside += (s, e) =>
+            {
+                AppDelegate.Shared.ShowAbout();
+            };
 
             MyButton.TouchUpInside += async (s, e) =>
             {
@@ -28,12 +33,6 @@ namespace HelloIos
                     MyLabel.Text = ex.Message;
                 }
             };
-        }
-
-        public override void DidReceiveMemoryWarning()
-        {
-            base.DidReceiveMemoryWarning();
-            // Release any cached data, images, etc that aren't in use.
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿// WARNING
 //
-// This file has been generated automatically by Xamarin Studio from the outlets and
+// This file has been generated automatically by Visual Studio from the outlets and
 // actions declared in your storyboard file.
 // Manual changes to this file will not be maintained.
 //
@@ -11,9 +11,13 @@ using UIKit;
 
 namespace HelloIos
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("MainViewController")]
+    partial class MainViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton AboutButton { get; set; }
+
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton MyButton { get; set; }
@@ -24,6 +28,11 @@ namespace HelloIos
 
         void ReleaseDesignerOutlets ()
         {
+            if (AboutButton != null) {
+                AboutButton.Dispose ();
+                AboutButton = null;
+            }
+
             if (MyButton != null) {
                 MyButton.Dispose ();
                 MyButton = null;

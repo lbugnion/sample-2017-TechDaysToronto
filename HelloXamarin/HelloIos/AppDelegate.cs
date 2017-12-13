@@ -1,15 +1,22 @@
 ﻿using Foundation;
+using HelloXamarin.CommonUi;
 using UIKit;
+using Xamarin.Forms;
 
 namespace HelloIos
 {
-    // The UIApplicationDelegate for the application. This class is responsible for launching the 
-    // User Interface of the application, as well as listening (and optionally responding) to 
-    // application events from iOS.
+    // The UIApplicationDelegate for the application. This class is responsible for launching the
+    // User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
     [Register("AppDelegate")]
     public class AppDelegate : UIApplicationDelegate
     {
-        // class-level declarations
+        public static AppDelegate Shared;
+        public static UIStoryboard Storyboard = UIStoryboard.FromName("Main", null);
+
+        private UIWindow _window;
+        private UINavigationController _navigation;
+        private MainViewController _mainController;
+        private UIViewController _aboutController;
 
         public override UIWindow Window
         {
@@ -17,10 +24,30 @@ namespace HelloIos
             set;
         }
 
+        public void ShowAbout()
+        {
+            if (_aboutController == null)
+            {
+                // #2 Use it
+                _aboutController = new AboutPage().CreateViewController();
+            }
+
+            // And push it onto the navigation stack
+            _navigation.PushViewController(_aboutController, true);
+        }
+
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            // Override point for customization after application launch.
-            // If not required for your application you can safely delete this method
+            Forms.Init();
+
+            Shared = this;
+            _window = new UIWindow(UIScreen.MainScreen.Bounds);
+
+            _mainController = Storyboard.InstantiateInitialViewController() as MainViewController;
+            _navigation = new UINavigationController(_mainController);
+
+            _window.RootViewController = _navigation;
+            _window.MakeKeyAndVisible();
 
             return true;
         }
@@ -57,3 +84,5 @@ namespace HelloIos
         }
     }
 }
+
+
