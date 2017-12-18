@@ -5,7 +5,7 @@ namespace HelloXamarinFunctions
 {
     public partial class MainPage : ContentPage
 	{
-        private const string Url = "https://lbxamarindemo.azurewebsites.net/api/HttpTriggerCSharp/name/{name}?code=h6kv9xW9b/m7rWu40ioBl32k2HxhMldJaUPu1jbP62FanaD5mQXNOA==";
+        private const string Url = "YOUR URL HERE";
 
         public MainPage()
 		{
